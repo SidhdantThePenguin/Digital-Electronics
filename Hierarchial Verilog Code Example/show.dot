@@ -1,0 +1,60 @@
+digraph "Toplvl" {
+label="Toplvl";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="a", color="black", fontcolor="black" ];
+n2 [ shape=octagon, label="b", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="c", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="d", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="m", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="s0", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="s1", color="black", fontcolor="black" ];
+n8 [ shape=diamond, label="w1", color="black", fontcolor="black" ];
+n9 [ shape=diamond, label="w2", color="black", fontcolor="black" ];
+c14 [ shape=record, label="{{<p10> s|<p11> x1|<p12> x2}|U1\nmux2to1|{<p13> f}}",  ];
+c15 [ shape=record, label="{{<p10> s|<p11> x1|<p12> x2}|U2\nmux2to1|{<p13> f}}",  ];
+c16 [ shape=record, label="{{<p8> w1|<p9> w2}|U3\nadder|{<p6> s0|<p7> s1}}",  ];
+n1:e -> c14:p11:w [color="black", fontcolor="black", label=""];
+n2:e -> c15:p11:w [color="black", fontcolor="black", label=""];
+n3:e -> c14:p12:w [color="black", fontcolor="black", label=""];
+n4:e -> c15:p12:w [color="black", fontcolor="black", label=""];
+n5:e -> c14:p10:w [color="black", fontcolor="black", label=""];
+n5:e -> c15:p10:w [color="black", fontcolor="black", label=""];
+c16:p6:e -> n6:w [color="black", fontcolor="black", label=""];
+c16:p7:e -> n7:w [color="black", fontcolor="black", label=""];
+c14:p13:e -> n8:w [color="black", fontcolor="black", label=""];
+n8:e -> c16:p8:w [color="black", fontcolor="black", label=""];
+c15:p13:e -> n9:w [color="black", fontcolor="black", label=""];
+n9:e -> c16:p9:w [color="black", fontcolor="black", label=""];
+}
+digraph "adder" {
+label="adder";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="s0", color="black", fontcolor="black" ];
+n2 [ shape=octagon, label="s1", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="w1", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="w2", color="black", fontcolor="black" ];
+c8 [ shape=record, label="{{<p5> A|<p6> B}|$92\n$_AND_|{<p7> Y}}",  ];
+c9 [ shape=record, label="{{<p5> A|<p6> B}|$93\n$_XOR_|{<p7> Y}}",  ];
+c9:p7:e -> n1:w [color="black", fontcolor="black", label=""];
+c8:p7:e -> n2:w [color="black", fontcolor="black", label=""];
+n3:e -> c8:p6:w [color="black", fontcolor="black", label=""];
+n3:e -> c9:p6:w [color="black", fontcolor="black", label=""];
+n4:e -> c8:p5:w [color="black", fontcolor="black", label=""];
+n4:e -> c9:p5:w [color="black", fontcolor="black", label=""];
+}
+digraph "mux2to1" {
+label="mux2to1";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="f", color="black", fontcolor="black" ];
+n2 [ shape=octagon, label="s", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="x1", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="x2", color="black", fontcolor="black" ];
+c9 [ shape=record, label="{{<p5> A|<p6> B|<p7> S}|$95\n$_MUX_|{<p8> Y}}",  ];
+c9:p8:e -> n1:w [color="black", fontcolor="black", label=""];
+n2:e -> c9:p7:w [color="black", fontcolor="black", label=""];
+n3:e -> c9:p5:w [color="black", fontcolor="black", label=""];
+n4:e -> c9:p6:w [color="black", fontcolor="black", label=""];
+}
