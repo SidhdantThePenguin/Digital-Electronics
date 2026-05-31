@@ -1,0 +1,24 @@
+digraph "example_synth" {
+label="example_synth";
+rankdir="LR";
+remincross=true;
+n2 [ shape=octagon, label="f", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="g", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="x", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="y", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="z", color="black", fontcolor="black" ];
+c10 [ shape=record, label="{{<p7> A|<p8> B}|$91\n$_XOR_|{<p9> Y}}",  ];
+c11 [ shape=record, label="{{<p7> A|<p8> B}|$92\n$_XOR_|{<p9> Y}}",  ];
+c13 [ shape=record, label="{{<p7> A|<p8> B|<p12> S}|$93\n$_MUX_|{<p9> Y}}",  ];
+n1 [ shape=point ];
+c10:p9:e -> n1:w [color="black", fontcolor="black", label=""];
+n1:e -> c11:p7:w [color="black", fontcolor="black", label=""];
+n1:e -> c13:p12:w [color="black", fontcolor="black", label=""];
+c13:p9:e -> n2:w [color="black", fontcolor="black", label=""];
+c11:p9:e -> n3:w [color="black", fontcolor="black", label=""];
+n4:e -> c11:p8:w [color="black", fontcolor="black", label=""];
+n4:e -> c13:p8:w [color="black", fontcolor="black", label=""];
+n5:e -> c10:p8:w [color="black", fontcolor="black", label=""];
+n6:e -> c10:p7:w [color="black", fontcolor="black", label=""];
+n6:e -> c13:p7:w [color="black", fontcolor="black", label=""];
+}
