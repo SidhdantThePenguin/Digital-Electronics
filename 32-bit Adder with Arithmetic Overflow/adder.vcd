@@ -1,0 +1,57 @@
+$date
+	Wed Jun  3 20:31:44 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! overflow $end
+$var wire 1 " carryout $end
+$var wire 32 # S [31:0] $end
+$var reg 32 $ X [31:0] $end
+$var reg 32 % Y [31:0] $end
+$var reg 1 & carryin $end
+$scope module adder $end
+$var wire 32 ' X [31:0] $end
+$var wire 32 ( Y [31:0] $end
+$var wire 1 & carryin $end
+$var reg 32 ) S [31:0] $end
+$var reg 1 " carryout $end
+$var reg 1 ! overflow $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 )
+b1 (
+b1 '
+0&
+b1 %
+b1 $
+b10 #
+0"
+0!
+$end
+#10
+1"
+b0 #
+b0 )
+b11111111111111111111111111111111 $
+b11111111111111111111111111111111 '
+#20
+1!
+0"
+b10000000000000000000000000000000 #
+b10000000000000000000000000000000 )
+b1111111111111111111111111111111 $
+b1111111111111111111111111111111 '
+#30
+b11111111111111111111111111111110 #
+b11111111111111111111111111111110 )
+b1111111111111111111111111111111 %
+b1111111111111111111111111111111 (
+#40
