@@ -1,0 +1,215 @@
+$date
+	Thu Jun  4 17:43:06 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb $end
+$var wire 1 ! Z $end
+$var wire 1 " V $end
+$var wire 1 # N $end
+$var reg 4 $ X [3:0] $end
+$var reg 4 % Y [3:0] $end
+$scope module UUT $end
+$var wire 1 " V $end
+$var wire 4 & X [3:0] $end
+$var wire 4 ' Y [3:0] $end
+$var wire 1 ! Z $end
+$var wire 4 ( S [3:0] $end
+$var wire 1 # N $end
+$var wire 4 ) C [4:1] $end
+$scope module FA1 $end
+$var wire 1 * carryIn $end
+$var wire 1 + carryOut $end
+$var wire 1 , sum $end
+$var wire 1 - x $end
+$var wire 1 . y $end
+$upscope $end
+$scope module FA2 $end
+$var wire 1 / carryIn $end
+$var wire 1 0 carryOut $end
+$var wire 1 1 sum $end
+$var wire 1 2 x $end
+$var wire 1 3 y $end
+$upscope $end
+$scope module FA3 $end
+$var wire 1 4 carryIn $end
+$var wire 1 5 carryOut $end
+$var wire 1 6 sum $end
+$var wire 1 7 x $end
+$var wire 1 8 y $end
+$upscope $end
+$scope module FA4 $end
+$var wire 1 9 carryIn $end
+$var wire 1 : carryOut $end
+$var wire 1 ; sum $end
+$var wire 1 < x $end
+$var wire 1 = y $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1=
+0<
+0;
+1:
+19
+18
+07
+06
+15
+14
+13
+02
+01
+10
+1/
+1.
+0-
+0,
+1+
+1*
+b1111 )
+b0 (
+b0 '
+b0 &
+b0 %
+b0 $
+0#
+0"
+1!
+$end
+#10
+0!
+04
+b1101 )
+00
+11
+0,
+b10 (
+06
+0.
+03
+1-
+17
+b11 %
+b11 '
+b101 $
+b101 &
+#20
+0:
+1#
+0"
+1;
+09
+14
+05
+11
+b11 )
+10
+b1110 (
+16
+13
+08
+12
+07
+b101 %
+b101 '
+b11 $
+b11 &
+#30
+1:
+0#
+0"
+0;
+19
+b110 (
+16
+b1111 )
+15
+18
+17
+b1 %
+b1 '
+b111 $
+b111 &
+#40
+1"
+09
+05
+04
+00
+0/
+0#
+1,
+b1000 )
+0+
+11
+16
+b111 (
+0;
+0-
+02
+07
+1<
+b1000 $
+b1000 &
+#50
+0!
+1"
+14
+19
+1/
+10
+15
+1#
+0:
+0,
+b111 )
+1+
+01
+06
+b1000 (
+1;
+03
+08
+0=
+1-
+12
+17
+0<
+b1111 %
+b1111 '
+b111 $
+b111 &
+#60
+0!
+0/
+04
+09
+0#
+1,
+0+
+01
+00
+06
+05
+b1 (
+0;
+b1000 )
+1:
+1=
+0-
+02
+07
+1<
+b111 %
+b111 '
+b1000 $
+b1000 &
+#70
