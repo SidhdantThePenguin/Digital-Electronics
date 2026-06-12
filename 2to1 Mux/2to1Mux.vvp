@@ -1,0 +1,70 @@
+#! /ucrt64/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1391-gd480c4d7d)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\msys64\ucrt64\lib\ivl\system.vpi";
+:vpi_module "C:\msys64\ucrt64\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\msys64\ucrt64\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\msys64\ucrt64\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\msys64\ucrt64\lib\ivl\va_math.vpi";
+S_000001576268ec90 .scope module, "tb" "tb" 2 11;
+ .timescale 0 0;
+v000001576264f490_0 .net "f", 0 0, L_000001576264f710;  1 drivers
+v000001576264f530_0 .var "s", 0 0;
+v000001576264f5d0_0 .var "w0", 0 0;
+v000001576264f670_0 .var "w1", 0 0;
+S_000001576268ee20 .scope module, "uut" "mux2to1" 2 16, 2 1 0, S_000001576268ec90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "w0";
+    .port_info 1 /INPUT 1 "w1";
+    .port_info 2 /INPUT 1 "s";
+    .port_info 3 /OUTPUT 1 "f";
+v000001576268e7f0_0 .net "f", 0 0, L_000001576264f710;  alias, 1 drivers
+v000001576268e9b0_0 .net "s", 0 0, v000001576264f530_0;  1 drivers
+v000001576268ea50_0 .net "w0", 0 0, v000001576264f5d0_0;  1 drivers
+v000001576264f3f0_0 .net "w1", 0 0, v000001576264f670_0;  1 drivers
+L_000001576264f710 .functor MUXZ 1, v000001576264f5d0_0, v000001576264f670_0, v000001576264f530_0, C4<>;
+    .scope S_000001576268ec90;
+T_0 ;
+    %vpi_call 2 19 "$dumpfile", "mux2to1.vcd" {0 0 0};
+    %vpi_call 2 20 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001576268ec90 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_000001576268ec90;
+T_1 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f5d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f670_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f530_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f5d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f670_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001576264f530_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001576264f5d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f5d0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f530_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000001576264f5d0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001576264f670_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000001576264f530_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 31 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "2to1Mux.v";
